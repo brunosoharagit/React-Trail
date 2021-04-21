@@ -79,5 +79,24 @@
         background: transparent;
         border: 0;
         font-size: 0;
+
+        &.playButton {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1rem;
+            background: var(--purple-400);
+        }
+
+        &.playButton:hover{
+            background: var(--purple-300);
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1rem;
+        }
+    }
+
+    button:hover{
+        background: var(--purple-300);
+        border-radius: 1rem;
     }
 }
