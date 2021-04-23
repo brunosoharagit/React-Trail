@@ -1,4 +1,4 @@
-import { GetStaticProps} from 'next';
+import { GetStaticProps } from 'next';
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
