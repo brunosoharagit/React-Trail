@@ -24,7 +24,8 @@ export function Player(){
         isLooping,
         isShuffling,
         toggleLoop,
-        toggleShuffle
+        toggleShuffle,
+        clearPlayerState
     } = usePlayer()
 
     useEffect(() => {
@@ -50,6 +51,14 @@ export function Player(){
         audioRef.current.addEventListener('timeupdate', () => {
             setProgress(Math.floor(audioRef.current.currentTime));
         });
+    }
+
+    function handleEpisodeEnded(){
+        if (hasNext){
+            playNext()
+        } else {
+            clearPlayerState()
+        }
     }
 
     const episode = episodeList[currentEpisodeIndex];
@@ -103,6 +112,7 @@ export function Player(){
                         src={episode.url}
                         ref={audioRef}
                         autoPlay
+                        onEnded={handleEpisodeEnded}
                         loop={isLooping}
                         onPlay={() => setPlayingState(true)}
                         onPause={() => setPlayingState(false)}
@@ -122,10 +132,10 @@ export function Player(){
                     <button type="button" onClick={playPrevious} disabled={!episode || !hasPrevious} >
                         <img src="/play-previous.svg" alt="Anterior"/>
                     </button>
-                    <button type="button" 
-                    className={styles.playButton} 
-                    disabled={!episode}
-                    onClick={togglePlay}
+                    <button type="button"
+                        className={styles.playButton}
+                        disabled={!episode}
+                        onClick={togglePlay}
                     >
                         { isPlaying 
                             ? <img src="/pause.svg" alt="Tocar"/>
