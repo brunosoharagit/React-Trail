@@ -5,6 +5,12 @@
 # 📷 Prints
 ![image](https://user-images.githubusercontent.com/61017539/116012549-78fda900-a601-11eb-8c3f-e58ece2277d7.png)
 
+![image](https://user-images.githubusercontent.com/61017539/116013502-e8c26280-a606-11eb-91ca-2e9af4c04031.png)
+
+![image](https://user-images.githubusercontent.com/61017539/116013529-0c85a880-a607-11eb-84e2-379ec5c1c3c8.png)
+
+
+
 # 🛠 Tecnologias Utilizadas
 - [React](https://pt-br.reactjs.org/)
 - [NodeJS](https://nodejs.org/en/)
